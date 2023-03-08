@@ -11,10 +11,10 @@ ssl:
   email: contact@coincooper.com
 updateVersions: false
 images:
-  peatio: zeusdev27/peatio:latest
-  barong: zeusdev27/barong:latest
+  peatio: pose1don/peatio:latest
+  barong: pose1don/barong:latest
   frontend: coverapp:1.0
-  castle: zeusdev27/cas:latest
+  castle: castle:latest
   rango: quay.io/openware/rango:2.6.1
 finex:
   enabled: false
