@@ -1,0 +1,32 @@
+version: '3.6'
+
+services:
+  frontend:
+    restart: always
+    image: "<%= @config['images']['frontend'] %>"
+    labels:
+      - "traefik.http.routers.frontend-<%= @name %>.rule=Host(`<%= @config['app']['subdomain'] %>.<%= @config['app']['domain'] %>`) && PathPrefix(`/`)"
+      - "traefik.enable=true"
+      - "traefik.http.services.frontend-<%= @name %>.loadbalancer.server.port=80"
+      <%- if @config['ssl']['enabled'] -%>
+      - "traefik.http.routers.frontend-<%= @name %>.entrypoints=websecure"
+      - "traefik.http.routers.frontend-<%= @name %>.tls=true"
+      - "traefik.http.routers.frontend-<%= @name %>.tls.certresolver=myresolver"
+      <%- else -%>
+      - "traefik.http.routers.frontend-<%= @name %>.entrypoints=web"
+      <%- end -%>
+
+  castle:
+    restart: always
+    image: "<%= @config['images']['castle'] %>"
+    labels:
+      - "traefik.http.routers.castle-<%= @name %>.rule=Host(`<%= @config['app']['subdomain'] %>.<%= @config['app']['domain'] %>`) && PathPrefix(`/castle`)"
+      - "traefik.enable=true"
+      - "traefik.http.services.castle-<%= @name %>.loadbalancer.server.port=80"
+      <%- if @config['ssl']['enabled'] -%>
+      - "traefik.http.routers.castle-<%= @name %>.entrypoints=websecure"
+      - "traefik.http.routers.castle-<%= @name %>.tls=true"
+      - "traefik.http.routers.castle-<%= @name %>.tls.certresolver=myresolver"
+      <%- else -%>
+      - "traefik.http.routers.castle-<%= @name %>.entrypoints=web"
+      <%- end -%>

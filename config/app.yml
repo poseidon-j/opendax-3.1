@@ -1,0 +1,121 @@
+---
+app:
+  name: OpenDAX
+  domain: domain .com
+  subdomain: www
+  show_landing: true
+render_protect: false
+csrfEnabled: false
+ssl:
+  enabled: true
+  email: support@smartchainers.com
+updateVersions: false
+images:
+  peatio: zeusdev27/peatio:latest
+  barong: zeusdev27/barong:latest
+  frontend: coverapp:1.0
+  castle: zeusdev27/cas:latest
+  rango: quay.io/openware/rango:2.6.1
+finex:
+  enabled: false
+  image: quay.io/openware/finex:2.6.39
+  license_key: changeme
+vendor:
+  frontend: git@github.com:openware/baseapp.git
+kyc:
+  provider: local
+  authorization_token: changeme
+  sandbox_mode: true
+  api_endpoint: https://api.kycaid.com/
+vault:
+  root_token: changeme
+  peatio_rails_token: changeme
+  peatio_crypto_token: changeme
+  peatio_upstream_token: changeme
+  peatio_matching_token: changeme
+  barong_token: changeme
+  finex_engine_token: changeme
+database:
+  host: db
+  adapter: postgresql
+  port: 5432
+  user: root
+  password: changeme
+storage:
+  provider: aws
+  bucketName: opendax-barong-docs-buckets
+  region: ap-south-1
+  endpoint: https://s3.ap-south-1.amazonaws.com
+  accessKey: AKIAIOSEBPLM4R35XBAA
+  secretKey: "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"
+  signatureVersion: '4'
+twilio:
+  enabled: true
+  phone_number: "+15622685594"
+  account_sid: XXAC03e8fa1f97d721df11c3307095e8546f
+  auth_token: XX2277da908f2e1edb3edbf4ed2b2d5dad
+gaTrackerKey: ''
+captcha:
+  type: none
+  siteKey: changeme
+  secretKey: changeme
+smtp:
+  host: smtp.zoho.in
+  port: 587
+  user: exchange@smartchainers.in
+  password: WUJ*D86_6Bp5wYU
+  sender_email: exchange@smartchainers.in
+  sender_name: xumchain
+  sender_logo: https://xum-logo.s3.us-east-2.amazonaws.com/photo_2021-05-13_19-00-01.png
+wallets:
+  eth:
+  - kind: deposit
+    address: changeme
+    max_balance: 0.0
+    secret: changeme
+  - kind: hot
+    address: changeme
+    max_balance: 100.0
+    secret: changeme
+  - kind: warm
+    address: changeme
+    max_balance: 1000.0
+    secret: changeme
+  btc:
+  - kind: deposit
+    address: changeme
+    max_balance: 0.0
+  - kind: hot
+    address: changeme
+    max_balance: 100.0
+  - kind: warm
+    address: changeme
+    max_balance: 1000.0
+parity:
+  network: testnet
+  address: parity
+  rpcport: 8545
+  port: 30303
+bitcoind:
+  enabled: false
+  rpcuser: admin
+  rpcpassword: changeme
+  address: bitcoind
+  network: testnet
+  rpcport: 18332
+  port: 18333
+litecoind:
+  rpcuser: admin
+  rpcpassword: changeme
+  address: litecoind
+  network: testnet
+  rpcport: 19332
+  port: 19335
+terraform:
+  credentials: "~/safe/opendax.json"
+  project: example-opendax
+  region: europe-west4
+  zone: europe-west4-a
+  instance_name: opendax-cloud
+  machine_type: n1-standard-4
+  image: debian-cloud/debian-9

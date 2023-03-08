@@ -1,0 +1,16 @@
+keychain:
+  applogic:
+    algorithm: RS256
+    value: <%= @barong_public_key %>
+    
+scopes:
+  read_users:
+    mandatory_signers:
+      - applogic
+    permitted_signers:
+      - applogic
+  otp_sign:
+    mandatory_signers:
+      - applogic
+    permitted_signers:
+      - applogic
