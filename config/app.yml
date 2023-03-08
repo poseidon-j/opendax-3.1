@@ -52,8 +52,8 @@ storage:
 twilio:
   enabled: true
   phone_number: "+15622685594"
-  account_sid: XXAC03e8fa1f97d721df11c3307095e8546f
-  auth_token: XX2277da908f2e1edb3edbf4ed2b2d5dad
+  account_sid: XXAC03e8fa1f97d721df11c3307095e8546
+  auth_token: XX2277da908f2e1edb3edbf4ed2b2d5
 gaTrackerKey: ''
 captcha:
   type: none
