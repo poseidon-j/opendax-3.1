@@ -1,14 +1,14 @@
 ---
 app:
   name: OpenDAX
-  domain: domain .com
+  domain: coincooper.com
   subdomain: www
   show_landing: true
 render_protect: false
 csrfEnabled: false
 ssl:
   enabled: true
-  email: support@smartchainers.com
+  email: contact@coincooper.com
 updateVersions: false
 images:
   peatio: zeusdev27/peatio:latest
