@@ -62,11 +62,11 @@ captcha:
 smtp:
   host: smtp.zoho.in
   port: 587
-  user: exchange@smartchainers.in
+  user: exchange@coincooper.in
   password: WUJ*D86_6Bp5wYU
-  sender_email: exchange@smartchainers.in
+  sender_email: contact@coincooper.com
   sender_name: xumchain
-  sender_logo: https://xum-logo.s3.us-east-2.amazonaws.com/photo_2021-05-13_19-00-01.png
+  sender_logo: 
 wallets:
   eth:
   - kind: deposit
