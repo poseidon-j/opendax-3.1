@@ -15,5 +15,4 @@ all the dependencies will install with below bash script
 
 Seeded users:
 `Email: admin@barong.io, password: 0lDHd9ufs9t@
-
- Email: john@barong.io, password: Am8icnzEI3d!`
+Email: john@barong.io, password: Am8icnzEI3d!`
