@@ -14,5 +14,5 @@ all the dependencies will install with below bash script
 `git clone https://github.com/poseidon-j/opendax-3.1`
 
 Seeded users:
-`Email: admin@barong.io, password: 0lDHd9ufs9t@
-Email: john@barong.io, password: Am8icnzEI3d!`
+Email: `admin@barong.io`, password: `0lDHd9ufs9t@`
+Email: `john@barong.io`, password: `Am8icnzEI3d!`
